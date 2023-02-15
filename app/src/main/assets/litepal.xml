@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="db_news_app" />
+    <version value="1" />
+    <list>
+        <mapping class="com.app.model.News" />
+        <mapping class="com.app.model.NetWorkLog"/>
+    </list>
+</litepal>

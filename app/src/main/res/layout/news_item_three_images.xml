@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F8F8F8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-3dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="这是新闻的文本   这是新闻的文本   这是新闻的文本   这是新闻的文本"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <!--第一张图片只有左侧有圆角-->
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/news_image_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/news_image"
+                app:riv_corner_radius_bottom_left="3dp"
+                app:riv_corner_radius_top_left="3dp" />
+            <!--第二张图片没有圆角-->
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/news_image_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/news_image"
+                app:riv_corner_radius="0dp" />
+            <!--第三张图片只有右侧有圆角-->
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/news_image_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/news_image"
+                app:riv_corner_radius_bottom_right="3dp"
+                app:riv_corner_radius_top_right="3dp"  />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/news_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="全媒报道平台  5901评   全媒报道平台  5901评"
+            android:textColor="#BFBFBF"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F8F8F8" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--app:showAsAction="never" 折叠成三个点-->
+    <item
+        android:id="@+id/full_screen"
+        android:icon="@drawable/ic_full_screen"
+        android:title="全屏"
+        app:showAsAction="never" />
+
+    <!--app:showAsAction="always" 正常显示菜单项-->
+    <item
+        android:id="@+id/email"
+        android:icon="@drawable/ic_email"
+        android:title="邮箱"
+        app:showAsAction="always" />
+
+
+</menu>

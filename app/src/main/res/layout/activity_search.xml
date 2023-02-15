@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FFFFFF">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--android:layout_centerVertical="true"        相对于父布局中垂直方向居中-->
+                <!--android:layout_marginRight="10dp"           右边的外边距设置为 10 dp-->
+                <!--android:layout_toLeftOf="@+id/search_cancel_button" 让搜索框处于TextView(即"取消")的左边-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/search_cancel_button"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F4F4F4"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/icon_search"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_search" />
+
+                        <!--android:layout_centerVertical="true"            相对于父布局中垂直方向居中-->
+                        <!--android:layout_toRightOf="@+id/icon_search"      设置编辑框的位置为放大镜图标的右边-->
+                        <!--android:cursorVisible="true"                    设置光标可见-->
+                        <!--android:textCursorDrawable="@drawable/text_cursor_drawable" 设置光标的形状-->
+                        <!--android:imeOptions="actionSearch"               将回车键变成搜索键-->
+                        <!--android:singleLine="true"                       只允许输入单行文本-->
+                        <EditText
+                            android:id="@+id/home_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/icon_search"
+                            android:background="#F4F4F4"
+                            android:cursorVisible="true"
+                            android:imeOptions="actionSearch"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/text_cursor_drawable">
+
+                        </EditText>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--android:layout_alignParentRight="true"  与父布局的右边对齐  -->
+                <!--android:layout_centerVertical="true"    相对于父布局中垂直方向居中  -->
+                <!--android:layout_marginRight="10dp"       右边距-->
+                <!--android:gravity="center"                让TextView里面的文字处于TextView的正中心-->
+                <TextView
+                    android:id="@+id/search_cancel_button"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="取消" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</LinearLayout>
